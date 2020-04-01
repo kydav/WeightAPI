@@ -4,18 +4,16 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WeightAPI.Models
 {
-    public class Workout
+    public class WorkoutExercise
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
         [Required]
-        public List<WorkoutExercise> Exercises { get; set; }
+        public Exercise Exercise { get; set; }
 
-        public string Notes { get; set; }
+        public List<ExerciseSet> Sets { get; set; }
 
-        [Required]
-        public System.DateTime DatePerformed { get; set; }
     }
 }
