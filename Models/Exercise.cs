@@ -14,10 +14,13 @@ namespace WeightAPI.Models
         public string ExerciseName { get; set; }
 
         [Required]
-        public BodyPart Part { get; set; }
+        public bool Custom { get; set; }
 
         [Required]
-        public WorkoutType Type { get; set; }
+        public BodyPart BodyPart { get; set; }
+
+        [Required]
+        public WorkoutType WorkoutType { get; set; }
 
         public string Notes { get; set; }
 

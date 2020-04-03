@@ -1,0 +1,39 @@
+﻿<Properties StartupConfiguration="{3EF49B1B-3A04-44E0-91D5-B4526A845E54}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Services/WeightDBContextExtentions.cs">
+    <Files>
+      <File FileName="Models/EmptyClass.cs" Line="19" Column="25" />
+      <File FileName="Services/WeightDBContext.cs" Line="18" Column="10" />
+      <File FileName="Models/Exercise.cs" Line="22" Column="19" />
+      <File FileName="Models/ExerciseSet.cs" Line="1" Column="1" />
+      <File FileName="Models/Routine.cs" Line="1" Column="1" />
+      <File FileName="Models/Workout.cs" Line="1" Column="1" />
+      <File FileName="Models/WorkoutExercise.cs" Line="1" Column="1" />
+      <File FileName="Models/Constants/WorkoutType.cs" Line="1" Column="1" />
+      <File FileName="Models/Constants/BodyPart.cs" Line="11" Column="2" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="WeightAPI" expanded="True">
+            <Node name="WeightAPI" expanded="True">
+              <Node name="Models" expanded="True">
+                <Node name="Constants" expanded="True" />
+              </Node>
+              <Node name="Properties" expanded="True" />
+              <Node name="Services" expanded="True">
+                <Node name="WeightDBContextExtentions.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.WeightAPI PreferredExecutionTarget="/Applications/Google Chrome.app" />
+</Properties>
