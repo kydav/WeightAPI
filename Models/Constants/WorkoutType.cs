@@ -5,7 +5,7 @@ namespace WeightAPI.Models.Constants
         Cable,
         Cardio,
         Barbell,
-        BodyWeigt,
+        Bodyweight,
         Dumbbell,
         Dumbbells,
         Machine,

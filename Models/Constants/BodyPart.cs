@@ -6,6 +6,7 @@ namespace WeightAPI.Models.Constants
         Back,
         Chest,
         Core,
-        Legs
+        Legs,
+        Shoulders
     }
 }

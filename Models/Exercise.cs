@@ -22,6 +22,9 @@ namespace WeightAPI.Models
         [Required]
         public WorkoutType WorkoutType { get; set; }
 
+        [Required]
+        public Metric Metric { get; set; }
+
         public string Notes { get; set; }
 
         public string URL { get; set; }
