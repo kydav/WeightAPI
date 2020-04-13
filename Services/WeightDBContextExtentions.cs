@@ -9,10 +9,22 @@ namespace WeightAPI.Services
     {
         public static void CreateSeedData(this WeightDBContext context)
         {
+            var users = new List<User>
+            {
+                new User()
+                {
+                    FirstName = "Kyler",
+                    LastName = "Davis",
+                    EmailAddress = "ky.s.dav@gmail.com",
+                    Password = "password"
+                }
+            };
             var exercises = new List<Exercise>()
             {
+
                 new Exercise()
                 {
+                    Id = 1,
                     ExerciseName = "Bench Press",
                     Custom = false,
                     BodyPart = BodyPart.Chest,
@@ -21,6 +33,7 @@ namespace WeightAPI.Services
                 },
                 new Exercise()
                 {
+                    Id = 2,
                     ExerciseName = "Incline Bench Press",
                     Custom = false,
                     BodyPart = BodyPart.Chest,
@@ -29,6 +42,7 @@ namespace WeightAPI.Services
                 },
                 new Exercise()
                 {
+                    Id = 3,
                     ExerciseName = "Incline Chest Fly",
                     Custom = false,
                     BodyPart = BodyPart.Chest,
@@ -37,6 +51,7 @@ namespace WeightAPI.Services
                 },
                 new Exercise()
                 {
+                    Id = 4,
                     ExerciseName = "Chest Fly",
                     Custom = false,
                     BodyPart = BodyPart.Chest,
@@ -45,6 +60,7 @@ namespace WeightAPI.Services
                 },
                 new Exercise()
                 {
+                    Id = 5,
                     ExerciseName = "Tricep Pushdown(Bar)",
                     Custom = false,
                     BodyPart = BodyPart.Arms,
@@ -53,6 +69,7 @@ namespace WeightAPI.Services
                 },
                 new Exercise()
                 {
+                    Id = 6,
                     ExerciseName = "Skullcrusher",
                     Custom = false,
                     BodyPart = BodyPart.Arms,
@@ -61,6 +78,7 @@ namespace WeightAPI.Services
                 },
                 new Exercise()
                 {
+                    Id = 7,
                     ExerciseName = "Overhead Tricep Extension",
                     Custom = false,
                     BodyPart = BodyPart.Arms,
@@ -69,6 +87,7 @@ namespace WeightAPI.Services
                 },
                 new Exercise()
                 {
+                    Id = 8,
                     ExerciseName = "Standing Calf Raise",
                     Custom = false,
                     BodyPart = BodyPart.Legs,
@@ -245,6 +264,8 @@ namespace WeightAPI.Services
                     Metric = Metric.Time
                 }
             };
+            
+
         }
     }
 }

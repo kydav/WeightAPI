@@ -1,16 +1,19 @@
 ﻿<Properties StartupConfiguration="{3EF49B1B-3A04-44E0-91D5-B4526A845E54}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Models/Constants/BodyPart.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Models/CustomExercise.cs">
     <Files>
-      <File FileName="Services/WeightDBContext.cs" Line="18" Column="10" />
-      <File FileName="Models/Exercise.cs" />
-      <File FileName="Models/ExerciseSet.cs" />
-      <File FileName="Models/Routine.cs" />
-      <File FileName="Models/Workout.cs" />
+      <File FileName="Services/WeightDBContext.cs" Line="12" Column="69" />
+      <File FileName="Models/Exercise.cs" Line="7" Column="18" />
+      <File FileName="Models/ExerciseSet.cs" Line="1" Column="1" />
+      <File FileName="Models/Routine.cs" Line="1" Column="1" />
+      <File FileName="Models/Workout.cs" Line="1" Column="1" />
       <File FileName="Models/WorkoutExercise.cs" />
       <File FileName="Models/Constants/WorkoutType.cs" Line="14" Column="6" />
-      <File FileName="Models/Constants/BodyPart.cs" Line="10" Column="18" />
-      <File FileName="Services/WeightDBContextExtentions.cs" Line="215" Column="45" />
-      <File FileName="Models/Constants/Metric.cs" Line="1" Column="1" />
+      <File FileName="Models/Constants/BodyPart.cs" Line="12" Column="2" />
+      <File FileName="Services/WeightDBContextExtentions.cs" Line="82" Column="64" />
+      <File FileName="Models/Constants/Metric.cs" Line="7" Column="19" />
+      <File FileName="Models/User.cs" Line="1" Column="1" />
+      <File FileName="Models/RoutineExercise.cs" Line="1" Column="1" />
+      <File FileName="Models/CustomExercise.cs" Line="19" Column="19" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -18,9 +21,8 @@
           <Node name="WeightAPI" expanded="True">
             <Node name="WeightAPI" expanded="True">
               <Node name="Models" expanded="True">
-                <Node name="Constants" expanded="True">
-                  <Node name="BodyPart.cs" selected="True" />
-                </Node>
+                <Node name="Constants" expanded="True" />
+                <Node name="CustomExercise.cs" selected="True" />
               </Node>
               <Node name="Properties" expanded="True" />
               <Node name="Services" expanded="True" />
