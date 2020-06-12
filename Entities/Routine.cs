@@ -11,7 +11,7 @@ namespace WeightAPI.Models
         public int Id { get; set; }
 
         [Required]
-        public List<RoutineExercise> Exercises { get; set; }
+        public List<RoutineExercise> Exercises { get; set; } = new List<RoutineExercise>();
         
         public string Notes { get; set; }
     }

@@ -11,6 +11,7 @@ namespace WeightAPI.Models
         public int Id { get; set; }
 
         [Required]
+        [MaxLength(50)]
         public string ExerciseName { get; set; }
 
         [Required]
@@ -25,8 +26,10 @@ namespace WeightAPI.Models
         [Required]
         public Metric Metric { get; set; }
 
+        [MaxLength(200)]
         public string Notes { get; set; }
 
+        [MaxLength(200)]
         public string URL { get; set; }
     }
 }

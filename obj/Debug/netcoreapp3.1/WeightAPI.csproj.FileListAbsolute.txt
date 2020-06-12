@@ -1,0 +1,5 @@
+/Users/kylerdavis/Documents/Development/WeightAPI/obj/Debug/netcoreapp3.1/WeightAPI.csprojAssemblyReference.cache
+/Users/kylerdavis/Documents/Development/WeightAPI/obj/Debug/netcoreapp3.1/WeightAPI.AssemblyInfoInputs.cache
+/Users/kylerdavis/Documents/Development/WeightAPI/obj/Debug/netcoreapp3.1/WeightAPI.AssemblyInfo.cs
+/Users/kylerdavis/Documents/Development/WeightAPI/obj/Debug/netcoreapp3.1/WeightAPI.csproj.CoreCompileInputs.cache
+/Users/kylerdavis/Documents/Development/WeightAPI/obj/Debug/netcoreapp3.1/WeightAPI.MvcApplicationPartsAssemblyInfo.cache

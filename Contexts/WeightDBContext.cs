@@ -1,8 +1,9 @@
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
+using WeightAPI.Entities;
 using WeightAPI.Models;
 
-namespace WeightAPI.Services
+namespace WeightAPI.Contexts
 {
     public class WeightDBContext : DbContext
     {

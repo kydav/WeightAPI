@@ -1,8 +1,8 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using WeightAPI.Models.Constants;
+using WeightAPI.Entities.Constants;
 
-namespace WeightAPI.Models
+namespace WeightAPI.Entities
 {
     public class Exercise
     {

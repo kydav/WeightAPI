@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using WeightAPI.Models;
 using WeightAPI.Models.Constants;
 
-namespace WeightAPI.Services
+namespace WeightAPI.Contexts
 {
     public static class WeightDBContextExtensions
     {
