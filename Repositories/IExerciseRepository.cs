@@ -3,7 +3,7 @@ using WeightAPI.Entities;
 
 namespace WeightAPI.Repositories
 {
-    public interface ICityRepository
+    public interface IExerciseRepository
     {
         Exercise GetExercise(int exerciseId);
 

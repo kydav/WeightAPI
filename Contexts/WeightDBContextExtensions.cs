@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using WeightAPI.Models;
-using WeightAPI.Models.Constants;
+using WeightAPI.Entities;
+using WeightAPI.Constants;
 
 namespace WeightAPI.Contexts
 {

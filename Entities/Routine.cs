@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace WeightAPI.Models
+namespace WeightAPI.Entities
 {
     public class Routine
     {

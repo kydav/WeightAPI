@@ -1,4 +1,4 @@
-﻿namespace WeightAPI.Entities.Constants
+﻿namespace WeightAPI.Constants
 {
     public enum Metric
     {

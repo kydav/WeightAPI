@@ -6,10 +6,11 @@ using WeightAPI.Models;
 
 namespace WeightAPI.Repositories
 {
-    public class CityRepository : ICityRepository
+    public class ExerciseRepository : IExerciseRepository
     {
         private readonly WeightDBContext _context;
-        public CityRepository(WeightDBContext context)
+
+        public ExerciseRepository(WeightDBContext context)
         {
             _context = context ?? throw new ArgumentNullException(nameof(context));
         }
