@@ -1,6 +1,7 @@
 ﻿using System;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using WeightAPI.Entities;
 using WeightAPI.Models;
 using WeightAPI.Repositories;
 
@@ -19,7 +20,7 @@ namespace WeightAPI.Controllers
             _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("{id}", Name = "GetExerciseById")]
         public IActionResult GetExercise(int id)
         {
             
@@ -29,7 +30,9 @@ namespace WeightAPI.Controllers
         [HttpPost]
         public IActionResult CreateExercise(ExerciseDto exercise)
         {
-            _exerciseRepository.AddExercise();
+            _exerciseRepository.AddExercise(_mapper.Map<Exercise>(exercise));
+            return Ok();
+
         }
     }
 }

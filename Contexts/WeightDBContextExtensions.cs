@@ -10,23 +10,51 @@ namespace WeightAPI.Contexts
     {
         public static void CreateSeedData(this WeightDBContext context)
         {
-            var users = new List<User>
-            {
-                new User()
-                {
-                    FirstName = "Kyler",
-                    LastName = "Davis",
-                    EmailAddress = "ky.s.dav@gmail.com",
-                    Password = "password"
-                }
-            };
+            //var users = new List<User>
+            //{
+            //    new User()
+            //    {
+            //        FirstName = "Kyler",
+            //        LastName = "Davis",
+            //        EmailAddress = "ky.s.dav@gmail.com",
+            //        Password = "password"
+            //    }
+            //};
             var exercises = new List<Exercise>()
             {
 
                 new Exercise()
                 {
                     Id = 1,
-                    ExerciseName = "Bench Press",
+                    Name = "Bench Press",
+                    Steps = new List<ExerciseStep>()
+                    {
+                        new ExerciseStep()
+                        {
+                            StepNumber = 1,
+                            StepWording = "Lay on flat bench with barbell within arms reach above"
+                        },
+                        new ExerciseStep()
+                        {
+                            StepNumber = 2,
+                            StepWording = "Unrack barbell"
+                        },
+                        new ExerciseStep()
+                        {
+                            StepNumber = 3,
+                            StepWording = "Depress barbell down to chest"
+                        },
+                        new ExerciseStep()
+                        {
+                            StepNumber = 4,
+                            StepWording = "Press barbell back up extending arms"
+                        },
+                        new ExerciseStep()
+                        {
+                            StepNumber = 5,
+                            StepWording = "Repeat for repetitions and rack weight when done"
+                        }
+                    },
                     Custom = false,
                     BodyPart = BodyPart.Chest,
                     WorkoutType = WorkoutType.Barbell,
@@ -35,7 +63,7 @@ namespace WeightAPI.Contexts
                 new Exercise()
                 {
                     Id = 2,
-                    ExerciseName = "Incline Bench Press",
+                    Name = "Incline Bench Press",
                     Custom = false,
                     BodyPart = BodyPart.Chest,
                     WorkoutType = WorkoutType.Barbell,
@@ -44,7 +72,7 @@ namespace WeightAPI.Contexts
                 new Exercise()
                 {
                     Id = 3,
-                    ExerciseName = "Incline Chest Fly",
+                    Name = "Incline Chest Fly",
                     Custom = false,
                     BodyPart = BodyPart.Chest,
                     WorkoutType = WorkoutType.Dumbbells,
@@ -53,7 +81,7 @@ namespace WeightAPI.Contexts
                 new Exercise()
                 {
                     Id = 4,
-                    ExerciseName = "Chest Fly",
+                    Name = "Chest Fly",
                     Custom = false,
                     BodyPart = BodyPart.Chest,
                     WorkoutType = WorkoutType.Dumbbells,
@@ -62,7 +90,7 @@ namespace WeightAPI.Contexts
                 new Exercise()
                 {
                     Id = 5,
-                    ExerciseName = "Tricep Pushdown(Bar)",
+                    Name = "Tricep Pushdown(Bar)",
                     Custom = false,
                     BodyPart = BodyPart.Arms,
                     WorkoutType = WorkoutType.Cable,
@@ -71,7 +99,7 @@ namespace WeightAPI.Contexts
                 new Exercise()
                 {
                     Id = 6,
-                    ExerciseName = "Skullcrusher",
+                    Name = "Skullcrusher",
                     Custom = false,
                     BodyPart = BodyPart.Arms,
                     WorkoutType = WorkoutType.Barbell,
@@ -80,7 +108,7 @@ namespace WeightAPI.Contexts
                 new Exercise()
                 {
                     Id = 7,
-                    ExerciseName = "Overhead Tricep Extension",
+                    Name = "Overhead Tricep Extension",
                     Custom = false,
                     BodyPart = BodyPart.Arms,
                     WorkoutType = WorkoutType.Cable,
@@ -89,7 +117,7 @@ namespace WeightAPI.Contexts
                 new Exercise()
                 {
                     Id = 8,
-                    ExerciseName = "Standing Calf Raise",
+                    Name = "Standing Calf Raise",
                     Custom = false,
                     BodyPart = BodyPart.Legs,
                     WorkoutType = WorkoutType.Barbell,
@@ -97,7 +125,7 @@ namespace WeightAPI.Contexts
                 },
                 new Exercise()
                 {
-                    ExerciseName = "Seated Calf Raise",
+                    Name = "Seated Calf Raise",
                     Custom = false,
                     BodyPart = BodyPart.Legs,
                     WorkoutType = WorkoutType.Barbell,
@@ -105,7 +133,7 @@ namespace WeightAPI.Contexts
                 },
                 new Exercise()
                 {
-                    ExerciseName = "One Arm Bent Over Row",
+                    Name = "One Arm Bent Over Row",
                     Custom = false,
                     BodyPart = BodyPart.Back,
                     WorkoutType = WorkoutType.Dumbbells,
@@ -113,7 +141,7 @@ namespace WeightAPI.Contexts
                 },
                 new Exercise()
                 {
-                    ExerciseName = "Lateral Pulldown",
+                    Name = "Lateral Pulldown",
                     Custom = false,
                     BodyPart = BodyPart.Back,
                     WorkoutType = WorkoutType.Cable,
@@ -121,7 +149,7 @@ namespace WeightAPI.Contexts
                 },
                 new Exercise()
                 {
-                    ExerciseName = "Standing Pulldown",
+                    Name = "Standing Pulldown",
                     Custom = false,
                     BodyPart = BodyPart.Back,
                     WorkoutType = WorkoutType.Cable,
@@ -130,7 +158,7 @@ namespace WeightAPI.Contexts
                 },
                 new Exercise()
                 {
-                    ExerciseName = "Bicep Curl",
+                    Name = "Bicep Curl",
                     Custom = false,
                     BodyPart = BodyPart.Arms,
                     WorkoutType = WorkoutType.Barbell,
@@ -138,7 +166,7 @@ namespace WeightAPI.Contexts
                 },
                 new Exercise()
                 {
-                    ExerciseName = "Incline Dumbbell Curl",
+                    Name = "Incline Dumbbell Curl",
                     Custom = false,
                     BodyPart = BodyPart.Arms,
                     WorkoutType = WorkoutType.Dumbbells,
@@ -146,7 +174,7 @@ namespace WeightAPI.Contexts
                 },
                 new Exercise()
                 {
-                    ExerciseName = "Flat Bench Lying Curl",
+                    Name = "Flat Bench Lying Curl",
                     Custom = false,
                     BodyPart = BodyPart.Arms,
                     WorkoutType = WorkoutType.Dumbbells,
@@ -154,7 +182,7 @@ namespace WeightAPI.Contexts
                 },
                 new Exercise()
                 {
-                    ExerciseName = "Hanging Leg Raise",
+                    Name = "Hanging Leg Raise",
                     Custom = false,
                     BodyPart = BodyPart.Core,
                     WorkoutType = WorkoutType.Bodyweight,
@@ -162,7 +190,7 @@ namespace WeightAPI.Contexts
                 },
                 new Exercise()
                 {
-                    ExerciseName = "Crunch",
+                    Name = "Crunch",
                     Custom = false,
                     BodyPart = BodyPart.Core,
                     WorkoutType = WorkoutType.Bodyweight,
@@ -170,7 +198,7 @@ namespace WeightAPI.Contexts
                 },
                 new Exercise()
                 {
-                    ExerciseName = "Side Bend",
+                    Name = "Side Bend",
                     Custom = false,
                     BodyPart = BodyPart.Core,
                     WorkoutType = WorkoutType.Dumbbell,
@@ -178,7 +206,7 @@ namespace WeightAPI.Contexts
                 },
                 new Exercise()
                 {
-                    ExerciseName = "OverheadPress",
+                    Name = "OverheadPress",
                     Custom = false,
                     BodyPart = BodyPart.Shoulders,
                     WorkoutType = WorkoutType.Dumbbells,
@@ -186,7 +214,7 @@ namespace WeightAPI.Contexts
                 },
                 new Exercise()
                 {
-                    ExerciseName = "Lateral Raise",
+                    Name = "Lateral Raise",
                     Custom = false,
                     BodyPart = BodyPart.Shoulders,
                     WorkoutType = WorkoutType.Dumbbells,
@@ -194,7 +222,7 @@ namespace WeightAPI.Contexts
                 },
                 new Exercise()
                 {
-                    ExerciseName = "One Arm Front Raise",
+                    Name = "One Arm Front Raise",
                     Custom = false,
                     BodyPart = BodyPart.Shoulders,
                     WorkoutType = WorkoutType.Cable,
@@ -202,7 +230,7 @@ namespace WeightAPI.Contexts
                 },
                 new Exercise()
                 {
-                    ExerciseName = "Seated Bent Over Rear Delt Fly",
+                    Name = "Seated Bent Over Rear Delt Fly",
                     Custom = false,
                     BodyPart = BodyPart.Back,
                     WorkoutType = WorkoutType.Dumbbells,
@@ -210,7 +238,7 @@ namespace WeightAPI.Contexts
                 },
                 new Exercise()
                 {
-                    ExerciseName = "Shrug",
+                    Name = "Shrug",
                     Custom = false,
                     BodyPart = BodyPart.Shoulders,
                     WorkoutType = WorkoutType.Dumbbell,
@@ -218,7 +246,7 @@ namespace WeightAPI.Contexts
                 },
                 new Exercise()
                 {
-                    ExerciseName = "Squat",
+                    Name = "Squat",
                     Custom = false,
                     BodyPart = BodyPart.Legs,
                     WorkoutType = WorkoutType.Barbell,
@@ -226,7 +254,7 @@ namespace WeightAPI.Contexts
                 },
                 new Exercise()
                 {
-                    ExerciseName = "One Legged Squat",
+                    Name = "One Legged Squat",
                     Custom = false,
                     BodyPart = BodyPart.Legs,
                     WorkoutType = WorkoutType.Barbell,
@@ -234,7 +262,7 @@ namespace WeightAPI.Contexts
                 },
                 new Exercise()
                 {
-                    ExerciseName = "Lunge",
+                    Name = "Lunge",
                     Custom = false,
                     BodyPart = BodyPart.Legs,
                     WorkoutType = WorkoutType.Barbell,
@@ -242,7 +270,7 @@ namespace WeightAPI.Contexts
                 },
                 new Exercise()
                 {
-                    ExerciseName = "Romanian Deadlift",
+                    Name = "Romanian Deadlift",
                     Custom = false,
                     BodyPart = BodyPart.Legs,
                     WorkoutType = WorkoutType.Barbell,
@@ -250,7 +278,7 @@ namespace WeightAPI.Contexts
                 },
                 new Exercise()
                 {
-                    ExerciseName = "Good Morning",
+                    Name = "Good Morning",
                     Custom = false,
                     BodyPart = BodyPart.Legs,
                     WorkoutType = WorkoutType.Barbell,
@@ -258,7 +286,7 @@ namespace WeightAPI.Contexts
                 },
                 new Exercise()
                 {
-                    ExerciseName = "Side Plank",
+                    Name = "Side Plank",
                     Custom = false,
                     BodyPart = BodyPart.Core,
                     WorkoutType = WorkoutType.Bodyweight,
