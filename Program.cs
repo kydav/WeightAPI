@@ -20,22 +20,22 @@ namespace WeightAPI
             {
                 //logger.Info("Initializing application...");
                 var host = CreateHostBuilder(args).Build();
-                using (var scope = host.Services.CreateScope())
-                {
-                    try
-                    {
-                        var context = scope.ServiceProvider.GetService<WeightDBContext>();
+                //using (var scope = host.Services.CreateScope())
+                //{
+                //    try
+                //    {
+                //        var context = scope.ServiceProvider.GetService<WeightDBContext>();
 
-                        //for demo purposes, delete the database & migrate on startup so
-                        // we can start with a clean slate
-                        context.Database.EnsureDeleted();
-                        context.Database.Migrate();
-                    }
-                    catch (Exception ex)
-                    {
-                        //logger.Error(ex, "An error occured while migrating the database");
-                    }
-                }
+                //        //for demo purposes, delete the database & migrate on startup so
+                //        // we can start with a clean slate
+                //        context.Database.EnsureDeleted();
+                //        //context.Database.Migrate();
+                //    }
+                //    catch (Exception ex)
+                //    {
+                //        //logger.Error(ex, "An error occured while migrating the database");
+                //    }
+                //}
 
                 host.Run();
             }

@@ -7,8 +7,8 @@ namespace WeightAPI.Contexts
 {
     public class WeightDBContext : DbContext
     {
-        public DbSet<Exercise> Exercises { get; set; }
-        public DbSet<ExerciseStep> ExerciseSteps { get; set; }
+        public DbSet<Exercise> Exercise { get; set; }
+        public DbSet<ExerciseStep> ExerciseStep { get; set; }
         //public DbSet<ExerciseSet> ExerciseSets { get; set; }
         //public DbSet<Routine> Routines { get; set; }
         //public DbSet<RoutineExercise> RoutineExercises { get; set; }
@@ -18,7 +18,10 @@ namespace WeightAPI.Contexts
 
         public WeightDBContext(DbContextOptions<WeightDBContext> options) : base(options)
         {
-            Database.EnsureCreated();
+            //Database.EnsureDeleted();
+            //Database.EnsureCreated();
+            //Database.ExecuteSqlRaw("SET IDENTITY_INSERT dbo.Exercise ON");
+            //Database.ExecuteSqlRaw("SET IDENTITY_INSERT dbo.ExerciseStep ON");
         }
 
 

@@ -19,12 +19,16 @@ namespace WeightAPI.Controllers
             _exerciseRepository = exerciseRepository ?? throw new ArgumentNullException(nameof(exerciseRepository));
             _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
         }
-
-        [HttpGet("{id}", Name = "GetExerciseById")]
+        [HttpGet]
+        public IActionResult GetExercises()
+        {
+            return Ok(_exerciseRepository.GetExercises());
+        }
+        [HttpGet("{id}")]//, Name = "GetExerciseById")]
         public IActionResult GetExercise(int id)
         {
-            
-            return Ok(_exerciseRepository.GetExercise(id));
+            var exercise = _exerciseRepository.GetExercise(id);
+            return Ok(exercise);
         }
 
         [HttpPost]

@@ -13,9 +13,6 @@
         "packagesPath": "/Users/kylerdavis/.nuget/packages/",
         "outputPath": "/Users/kylerdavis/Documents/Development/WeightAPI/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
-        ],
         "configFilePaths": [
           "/Users/kylerdavis/.config/NuGet/NuGet.Config"
         ],
@@ -23,10 +20,9 @@
           "netcoreapp3.1"
         ],
         "sources": {
-          "/Users/kylerdavis/Documents/Development/Work/open-canvas/admin-api/src/admin-api.widget-metadata": {},
           "http://proget.allegiance.com/nuget/core": {},
           "https://api.nuget.org/v3/index.json": {},
-          "https://dotnet.myget.org/F/dotnet-corefxlab/": {},
+          "https://gotnet.myget.org/F/dotnet-corefxlab/": {},
           "https://proget.allegiance.com/nuget/dotnet": {}
         },
         "frameworks": {

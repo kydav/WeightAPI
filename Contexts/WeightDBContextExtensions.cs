@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using WeightAPI.Models;
 using WeightAPI.Entities;
 using WeightAPI.Constants;
+using System.Linq;
+using Microsoft.EntityFrameworkCore;
 
 namespace WeightAPI.Contexts
 {
@@ -10,6 +12,10 @@ namespace WeightAPI.Contexts
     {
         public static void CreateSeedData(this WeightDBContext context)
         {
+            if (context.Exercise.Any())
+                return;
+
+            
             //var users = new List<User>
             //{
             //    new User()
@@ -25,7 +31,7 @@ namespace WeightAPI.Contexts
 
                 new Exercise()
                 {
-                    Id = 1,
+                    //Id = 1,
                     Name = "Bench Press",
                     Steps = new List<ExerciseStep>()
                     {
@@ -62,7 +68,7 @@ namespace WeightAPI.Contexts
                 },
                 new Exercise()
                 {
-                    Id = 2,
+                    //Id = 2,
                     Name = "Incline Bench Press",
                     Custom = false,
                     BodyPart = BodyPart.Chest,
@@ -71,7 +77,7 @@ namespace WeightAPI.Contexts
                 },
                 new Exercise()
                 {
-                    Id = 3,
+                    //Id = 3,
                     Name = "Incline Chest Fly",
                     Custom = false,
                     BodyPart = BodyPart.Chest,
@@ -80,7 +86,7 @@ namespace WeightAPI.Contexts
                 },
                 new Exercise()
                 {
-                    Id = 4,
+                    //Id = 4,
                     Name = "Chest Fly",
                     Custom = false,
                     BodyPart = BodyPart.Chest,
@@ -89,7 +95,7 @@ namespace WeightAPI.Contexts
                 },
                 new Exercise()
                 {
-                    Id = 5,
+                    //Id = 5,
                     Name = "Tricep Pushdown(Bar)",
                     Custom = false,
                     BodyPart = BodyPart.Arms,
@@ -98,7 +104,7 @@ namespace WeightAPI.Contexts
                 },
                 new Exercise()
                 {
-                    Id = 6,
+                    //Id = 6,
                     Name = "Skullcrusher",
                     Custom = false,
                     BodyPart = BodyPart.Arms,
@@ -107,7 +113,7 @@ namespace WeightAPI.Contexts
                 },
                 new Exercise()
                 {
-                    Id = 7,
+                    //Id = 7,
                     Name = "Overhead Tricep Extension",
                     Custom = false,
                     BodyPart = BodyPart.Arms,
@@ -116,7 +122,7 @@ namespace WeightAPI.Contexts
                 },
                 new Exercise()
                 {
-                    Id = 8,
+                    //Id = 8,
                     Name = "Standing Calf Raise",
                     Custom = false,
                     BodyPart = BodyPart.Legs,
@@ -293,7 +299,8 @@ namespace WeightAPI.Contexts
                     Metric = Metric.Time
                 }
             };
-            
+            context.AddRange(exercises);
+            context.SaveChanges();
 
         }
     }

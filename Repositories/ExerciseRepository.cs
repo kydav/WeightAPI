@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using WeightAPI.Contexts;
 using WeightAPI.Entities;
@@ -17,17 +18,23 @@ namespace WeightAPI.Repositories
 
         public Exercise GetExercise(int exerciseId)
         {
-            return _context.Exercises.Where(e => e.Id == exerciseId).FirstOrDefault();
+            return _context.Exercise.Where(e => e.Id == exerciseId).FirstOrDefault();
+        }
+        public List<Exercise> GetExercises()
+        {
+            return _context.Exercise.ToList();
         }
 
         public void AddExercise(Exercise exercise)
         {
-            _context.Exercises.Add(exercise);
+            _context.Exercise.Add(exercise);
         }
 
         public bool Save()
         {
             return (_context.SaveChanges() >= 0);
         }
+
+        
     }
 }
