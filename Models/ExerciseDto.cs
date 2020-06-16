@@ -22,7 +22,5 @@ namespace WeightAPI.Models
         public Metric Metric { get; set; }
 
         public string URL { get; set; }
-
-
     }
 }

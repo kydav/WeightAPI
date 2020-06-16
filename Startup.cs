@@ -26,6 +26,7 @@ namespace WeightAPI
         }
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors();
             services.AddMvc(
                 options => { options.EnableEndpointRouting = false; });
             var connectionString = _configuration["connectionStrings:cityInfoDBConnectionString"];
@@ -33,6 +34,7 @@ namespace WeightAPI
             {
                 o.UseSqlServer(connectionString);
             });
+            
             services.AddScoped<IExerciseRepository, ExerciseRepository>();
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
         }
@@ -44,7 +46,8 @@ namespace WeightAPI
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            string[] origins = new string[] { "http://localhost:4200" };
+            app.UseCors(b => b.AllowAnyMethod().AllowAnyHeader().WithOrigins(origins));
             //weightDBContext.CreateSeedData();
             app.UseRouting();
             app.UseMvc();

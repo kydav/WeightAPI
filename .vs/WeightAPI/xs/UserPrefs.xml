@@ -1,28 +1,15 @@
 ﻿<Properties StartupConfiguration="{3EF49B1B-3A04-44E0-91D5-B4526A845E54}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="Repositories/ExerciseRepository.cs">
     <Files>
-      <File FileName="Profiles/ExerciseProfile.cs" Line="1" Column="1" />
-      <File FileName="Entities/Exercise.cs" Line="1" Column="1" />
-      <File FileName="Startup.cs" Line="31" Column="36" />
-      <File FileName="Program.cs" Line="31" Column="54" />
-      <File FileName="Contexts/WeightDBContext.cs" Line="24" Column="15" />
-      <File FileName="Contexts/WeightDBContextExtensions.cs" Line="63" Column="23" />
-      <File FileName="Repositories/IExerciseRepository.cs" Line="17" Column="2" />
-      <File FileName="Entities/ExerciseStep.cs" Line="1" Column="1" />
-      <File FileName="Controllers/ExerciseController.cs" Line="25" Column="46" />
-      <File FileName="Repositories/ExerciseRepository.cs" Line="10" Column="48" />
+      <File FileName="Repositories/ExerciseRepository.cs" Line="28" Column="41" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="WeightAPI" expanded="True">
             <Node name="WeightAPI" expanded="True">
-              <Node name="Dependencies" expanded="True">
-                <Node name="PackageDependencies" expanded="True" />
-              </Node>
               <Node name="Constants" expanded="True" />
               <Node name="Contexts" expanded="True" />
-              <Node name="Controllers" expanded="True" />
               <Node name="Entities" expanded="True" />
               <Node name="Models" expanded="True" />
               <Node name="Profiles" expanded="True" />
@@ -40,9 +27,7 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/kylerdavis/Documents/Development/WeightAPI/Controllers/ExerciseController.cs" relfile="Controllers/ExerciseController.cs" line="31" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.ItemProperties.WeightAPI PreferredExecutionTarget="/Applications/Google Chrome.app" />

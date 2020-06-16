@@ -2184,7 +2184,7 @@
       ]
     },
     "runtime.native.System.Data.SqlClient.sni/4.4.0": {
-      "sha512": "A8v6PGmk+UGbfWo5Ixup0lPM4swuSwOiayJExZwKIOjTlFFQIsu3QnDXECosBEyrWSPryxBVrdqtJyhK3BaupQ==",
+      "sha512": "Xu7AUFtXuxEspQPI5nKCDEiEcbRmE5FTIO0qE1r0qA9v1OoawQZnbWmsnrdYaO8vlSixXMedPv1U6916STjPnQ==",
       "type": "package",
       "path": "runtime.native.system.data.sqlclient.sni/4.4.0",
       "files": [
@@ -2471,12 +2471,11 @@
       ]
     },
     "System.Collections.Specialized/4.3.0": {
-      "sha512": "Epx8PoVZR0iuOnJJDzp7pWvdfMMOAvpUo95pC4ScH2mJuXkKA2Y4aR3cG9qt2klHgSons1WFh4kcGW7cSXvrxg==",
+      "sha512": "NoPBj0ykejqAWW4p4gGtrrL+3c84ZLSvGnHgq422ew1Rj4WKj1FA8/BCybqC111EtgcqUl6ZJNFYYS22HLgbjA==",
       "type": "package",
       "path": "system.collections.specialized/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -5329,7 +5328,8 @@
     ]
   },
   "packageFolders": {
-    "/Users/kylerdavis/.nuget/packages/": {}
+    "/Users/kylerdavis/.nuget/packages/": {},
+    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
@@ -5340,6 +5340,9 @@
       "packagesPath": "/Users/kylerdavis/.nuget/packages/",
       "outputPath": "/Users/kylerdavis/Documents/Development/WeightAPI/obj/",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+      ],
       "configFilePaths": [
         "/Users/kylerdavis/.config/NuGet/NuGet.Config"
       ],
@@ -5347,9 +5350,10 @@
         "netcoreapp3.1"
       ],
       "sources": {
+        "/Users/kylerdavis/Documents/Development/Work/open-canvas/admin-api/src/admin-api.widget-metadata": {},
         "http://proget.allegiance.com/nuget/core": {},
         "https://api.nuget.org/v3/index.json": {},
-        "https://gotnet.myget.org/F/dotnet-corefxlab/": {},
+        "https://dotnet.myget.org/F/dotnet-corefxlab/": {},
         "https://proget.allegiance.com/nuget/dotnet": {}
       },
       "frameworks": {
