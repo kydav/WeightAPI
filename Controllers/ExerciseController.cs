@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using AutoMapper;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using WeightAPI.Entities;
 using WeightAPI.Models;
@@ -19,7 +22,12 @@ namespace WeightAPI.Controllers
             _exerciseRepository = exerciseRepository ?? throw new ArgumentNullException(nameof(exerciseRepository));
             _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<Exercise>))]
         public IActionResult GetExercises()
         {
             return Ok(_exerciseRepository.GetExercises());
