@@ -16,6 +16,7 @@ using WeightAPI.Contexts;
 using WeightAPI.Repositories;
 using Microsoft.OpenApi.Models;
 using System.IO;
+using Microsoft.AspNetCore.Mvc.Versioning;
 
 namespace WeightAPI
 {
@@ -30,6 +31,7 @@ namespace WeightAPI
         }
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddControllers();
             services.AddCors();
             services.AddMvc(
                 options => { options.EnableEndpointRouting = false; });
@@ -39,6 +41,14 @@ namespace WeightAPI
                 o.UseSqlServer(connectionString);
             });
 
+            services.AddApiVersioning(
+                o =>
+                {
+                    o.ReportApiVersions = true;
+                    o.AssumeDefaultVersionWhenUnspecified = true;
+                    o.DefaultApiVersion = new ApiVersion(1, 0);
+                    o.ApiVersionReader = new UrlSegmentApiVersionReader();
+                });
             services.AddVersionedApiExplorer(apiExplorerOptions =>
             {
                 apiExplorerOptions.GroupNameFormat = "'v'VVV";
@@ -93,10 +103,7 @@ namespace WeightAPI
             app.UseMvc();
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapGet("/", async context =>
-                {
-                    await context.Response.WriteAsync("Hello World!");
-                });
+                endpoints.MapControllers();
             });
         }
         private OpenApiInfo CreateInfoForApiVersion(ApiVersionDescription description)
