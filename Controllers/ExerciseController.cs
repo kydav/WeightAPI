@@ -47,13 +47,15 @@ namespace WeightAPI.Controllers
         {
             _exerciseRepository.AddExercise(_mapper.Map<Exercise>(exercise));
             _exerciseRepository.Save();
-            if(exercise.Steps.Count > 0)
-            {
-                var steps = exercise.Steps.ToList();
-                foreach (var step in steps)
-                    _exerciseStepRepository.AddExerciseStep(_mapper.Map<ExerciseStep>(step));
-                _exerciseStepRepository.Save();
-            }
+            //if(exercise.Steps.Count > 0)
+            //{
+            //    var steps = exercise.Steps.ToList();
+            //    foreach (var step in steps)
+            //        //TODO: Need to find a way to add the exercise to the step before it saves otherwise the foreign
+            //        //key doesn't exist and it can't save the steps.  
+            //        _exerciseStepRepository.AddExerciseStep(_mapper.Map<ExerciseStep>(step));
+            //    _exerciseStepRepository.Save();
+            //}
             return Ok();
 
         }

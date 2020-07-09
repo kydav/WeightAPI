@@ -28,6 +28,11 @@ namespace WeightAPI.Repositories
         public void AddExercise(Exercise exercise)
         {
             _context.Exercise.Add(exercise);
+            if (exercise.Steps.Count > 0)
+                foreach (var step in exercise.Steps)
+                    _context.ExerciseStep.Add(step);
+
+
         }
 
         public bool Save()
