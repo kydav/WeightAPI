@@ -9,6 +9,8 @@ namespace WeightAPI.Profiles
         {
             CreateMap<Entities.Exercise, Models.ExerciseDto>();
             CreateMap<Entities.ExerciseStep, Models.ExerciseStepDto>();
+            CreateMap<Models.ExerciseDto, Entities.Exercise>();
+            CreateMap<Models.ExerciseStepDto, Entities.ExerciseStep>();
         }
     }
 }

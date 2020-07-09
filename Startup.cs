@@ -72,6 +72,7 @@ namespace WeightAPI
                 //c.SwaggerDoc("v1", new OpenApiInfo { Title = "Weight API", Version = "v1" });
             });
             services.AddScoped<IExerciseRepository, ExerciseRepository>();
+            services.AddScoped<IExerciseStepRepository, ExerciseStepRepository>();
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
         }
 
