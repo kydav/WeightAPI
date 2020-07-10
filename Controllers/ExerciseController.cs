@@ -38,8 +38,18 @@ namespace WeightAPI.Controllers
         [HttpGet("{id}")]//, Name = "GetExerciseById")]
         public IActionResult GetExercise(int id)
         {
-            var exercise = _exerciseRepository.GetExercise(id);
-            return Ok(exercise);
+            try
+            {
+                if (!_exerciseRepository.ExerciseExists(id))
+                    return NotFound();
+
+                var exercise = _mapper.Map<ExerciseDto>(_exerciseRepository.GetExercise(id));
+                return Ok(exercise);
+            }
+            catch (Exception e)
+            {
+                return StatusCode(500, "A error occurred while handling your request");
+            }
         }
 
         [HttpPost]
@@ -47,17 +57,19 @@ namespace WeightAPI.Controllers
         {
             _exerciseRepository.AddExercise(_mapper.Map<Exercise>(exercise));
             _exerciseRepository.Save();
-            //if(exercise.Steps.Count > 0)
-            //{
-            //    var steps = exercise.Steps.ToList();
-            //    foreach (var step in steps)
-            //        //TODO: Need to find a way to add the exercise to the step before it saves otherwise the foreign
-            //        //key doesn't exist and it can't save the steps.  
-            //        _exerciseStepRepository.AddExerciseStep(_mapper.Map<ExerciseStep>(step));
-            //    _exerciseStepRepository.Save();
-            //}
             return Ok();
+        }
 
+        [HttpDelete]
+        public IActionResult DeleteExercise(int exerciseId)
+        {
+            if (!_exerciseRepository.ExerciseExists(exerciseId))
+                return NotFound();
+
+            var exercise = _exerciseRepository.GetExercise(exerciseId);
+            _exerciseRepository.DeleteExercise(exercise);
+            _exerciseRepository.Save();
+            return NoContent();
         }
     }
 }

@@ -12,6 +12,10 @@ namespace WeightAPI.Repositories
 
         void AddExercise(Exercise exercise);
 
+        void DeleteExercise(Exercise exercise);
+
+        bool ExerciseExists(int exerciseId);
+
         bool Save();
     }
 }
