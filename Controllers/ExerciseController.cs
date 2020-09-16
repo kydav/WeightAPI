@@ -65,11 +65,17 @@ namespace WeightAPI.Controllers
         {
             if (!_exerciseRepository.ExerciseExists(exerciseId))
                 return NotFound();
-
-            var exercise = _exerciseRepository.GetExercise(exerciseId);
-            _exerciseRepository.DeleteExercise(exercise);
-            _exerciseRepository.Save();
-            return NoContent();
+            try
+            {
+                var exercise = _exerciseRepository.GetExercise(exerciseId);
+                _exerciseRepository.DeleteExercise(exercise);
+                _exerciseRepository.Save();
+                return NoContent();
+            }
+            catch (Exception e)
+            {
+                return StatusCode(500, "There was an error while trying to delete the specified exercise");
+            }
         }
     }
 }
